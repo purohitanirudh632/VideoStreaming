@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ vedio.title }}</title>
+</head>
+<body>
+    <h1>{{ video.title }}</h1>
+    <p>{{ video.description }}</p>
+    <video width="640"  height="360" controls>
+        <source src="{{ video.video_file.url }}" type="vedio/mp4">
+         your browser does not support video tag. 
+    </video>
+    <p><a href="{% url 'video_list' %}">Back To Video List</a></p>
+</body>
+</html>
